@@ -1,1 +1,56 @@
 @import "tailwindcss";
+
+:root {
+  /* === Font Sizes with Line Heights === */
+
+  /* Heading - Large */
+  --heading-l-size: 64px;
+  --heading-l-line: 77px;
+
+  /* Heading - Medium */
+  --heading-m-size: 24px;
+  --heading-m-line: 29px;
+
+  /* Heading - Small */
+  --heading-s-size: 20px;
+  --heading-s-line: 24px;
+
+  /* Body - Medium */
+  --body-m-size: 18px;
+  --body-m-line: 24px;
+
+  /* Body - Small */
+  --body-s-size: 14px;
+  --body-s-line: 17px;
+}
+
+@theme {
+  --color-Black-950: #050505;
+  --color-Black-900: #1f1f1f;
+  --color-Black-800: #2d2d2d;
+  --color-Black-700: #3a3a3a;
+
+  /* Neutrals - Mid Tones */
+  --color-Gray-500: #757575;
+
+  /* Neutrals - Light Mode */
+  --color-Gray-100: #e9e9e9;
+  --color-Gray-50: #f4f4f4;
+  --color-White: #ffffff;
+
+  /* Accents */
+  --color-Primary: #a445ed; /* Purple */
+  --color-Danger: #ff5252; /* Red */
+
+  /* Font Families */
+  --font-Sans: "Inter", sans-serif;
+
+  --font-Serif: "Lora", serif;
+  --font-Mono: "Inconsolata", monospace;
+}
+
+/* @layer components{
+    .heading-l{
+        @apply 
+    }
+} */
