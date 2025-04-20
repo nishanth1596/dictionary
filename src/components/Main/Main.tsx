@@ -1,5 +1,12 @@
+import Search from "./Search";
+
 function Main() {
-  return <main className="">Main</main>;
+  return (
+    <main className="">
+      <Search />
+      <section></section>
+    </main>
+  );
 }
 
 export default Main;
