@@ -4,6 +4,7 @@ import { fetchData } from "../../api/fetchData";
 import LoadingSpinner from "../../ui/LoadingSpinner";
 import Noun from "./Noun";
 import Verb from "./Verb";
+import Source from "./Source";
 
 type LicenseEntry = {
   name: string;
@@ -36,7 +37,7 @@ export type DictionaryEntry = {
   meanings: MeaningsEntry[];
   phonetic: string;
   phonetics: PhoneticsEntry[];
-  sourceUrls: string[];
+  sourceUrls: string;
   word: string;
 };
 
@@ -66,6 +67,7 @@ function Dictionary() {
           <Title data={data[0]} />
           <Noun data={data[0]} />
           <Verb data={data[0]} />
+          <Source data={data[0]} />
         </>
       )}
     </section>

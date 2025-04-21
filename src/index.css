@@ -66,6 +66,10 @@
     @apply text-base leading-[1.19rem] font-normal tracking-normal;
   }
 
+  p {
+    @apply text-sm leading-[1.06rem] font-normal;
+  }
+
   .custom-bullets li::marker {
     color: var(--color-Primary);
   }

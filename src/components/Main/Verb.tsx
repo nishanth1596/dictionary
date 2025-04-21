@@ -5,7 +5,6 @@ type VerbProps = {
 };
 
 function Verb({ data }: VerbProps) {
-  console.log(data);
   const verb = data.meanings[1].definitions[0].definition;
   const example = data.meanings[1].definitions[0].example;
 
