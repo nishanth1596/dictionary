@@ -45,7 +45,6 @@
 
   /* Font Families */
   --font-Sans: "Inter", sans-serif;
-
   --font-Serif: "Lora", serif;
   --font-Mono: "Inconsolata", monospace;
 }
@@ -57,5 +56,17 @@
 
   h3 {
     @apply text-lg leading-6 font-normal tracking-normal md:text-2xl md:leading-[1.81rem];
+  }
+
+  h4 {
+    @apply text-lg leading-[1.38rem] font-bold italic;
+  }
+
+  h5 {
+    @apply text-base leading-[1.19rem] font-normal tracking-normal;
+  }
+
+  .custom-bullets li::marker {
+    color: var(--color-Primary);
   }
 }

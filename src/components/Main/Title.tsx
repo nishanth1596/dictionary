@@ -12,7 +12,7 @@ function Title({ data }: TitleProps) {
     <div className="mt-6 flex items-center justify-between">
       <div>
         <h2>{word}</h2>
-        <p className="text-Primary mt-2">{phonetic}</p>
+        <p className="text-Primary font-Sans mt-2">{phonetic}</p>
       </div>
 
       <button aria-label={`Play pronunciation of ${word}`}>

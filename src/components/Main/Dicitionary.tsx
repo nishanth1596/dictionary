@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Title from "./Title";
 import { fetchData } from "../../api/fetchData";
 import LoadingSpinner from "../../ui/LoadingSpinner";
+import Noun from "./Noun";
 
 type LicenseEntry = {
   name: string;
@@ -57,7 +58,14 @@ function Dictionary() {
 
   return (
     <section className="mx-6">
-      {!data ? <LoadingSpinner /> : <Title data={data[0]} />}
+      {!data ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+          <Title data={data[0]} />
+          <Noun data={data[0]} />
+        </>
+      )}
     </section>
   );
 }
