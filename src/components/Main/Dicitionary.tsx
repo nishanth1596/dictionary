@@ -3,6 +3,7 @@ import Title from "./Title";
 import { fetchData } from "../../api/fetchData";
 import LoadingSpinner from "../../ui/LoadingSpinner";
 import Noun from "./Noun";
+import Verb from "./Verb";
 
 type LicenseEntry = {
   name: string;
@@ -13,6 +14,7 @@ type definitionsEntry = {
   antonyms: string[];
   definition: string;
   synonyms: string[];
+  example: string;
 };
 
 type MeaningsEntry = {
@@ -40,7 +42,6 @@ export type DictionaryEntry = {
 
 function Dictionary() {
   const [data, setData] = useState<DictionaryEntry[]>();
-  console.log(data);
 
   useEffect(() => {
     const getData = async () => {
@@ -64,6 +65,7 @@ function Dictionary() {
         <>
           <Title data={data[0]} />
           <Noun data={data[0]} />
+          <Verb data={data[0]} />
         </>
       )}
     </section>
