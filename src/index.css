@@ -3,6 +3,7 @@
 :root {
   /* === Font Sizes with Line Heights === */
 
+  /* Desktop heading-h2 */
   /* Heading - Large */
   --heading-l-size: 64px;
   --heading-l-line: 77px;
@@ -49,8 +50,12 @@
   --font-Mono: "Inconsolata", monospace;
 }
 
-/* @layer components{
-    .heading-l{
-        @apply 
-    }
-} */
+@layer utilities {
+  h2 {
+    @apply text-[2rem] leading-[2.44rem] font-bold tracking-normal md:text-[4rem] md:leading-[4.19rem];
+  }
+
+  h3 {
+    @apply text-lg leading-6 font-normal tracking-normal md:text-2xl md:leading-[1.81rem];
+  }
+}

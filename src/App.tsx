@@ -3,7 +3,7 @@ import Main from "./components/Main/Main";
 
 function App() {
   return (
-    <div className="">
+    <div className="font-Sans">
       <Header />
       <Main />
     </div>

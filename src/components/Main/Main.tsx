@@ -1,10 +1,11 @@
+import Dictionary from "./Dicitionary";
 import Search from "./Search";
 
 function Main() {
   return (
     <main className="">
       <Search />
-      <section></section>
+      <Dictionary />
     </main>
   );
 }
