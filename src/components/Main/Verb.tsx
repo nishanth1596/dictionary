@@ -10,19 +10,13 @@ function Verb({ data }: VerbProps) {
   );
 
   if (!verbDataSet) return null;
-  console.log(verbDataSet);
 
   const verbDataIndex = verbDataSet.definitions.findIndex(
     (item) => item.example,
   );
-
   const verbData = verbDataSet.definitions[verbDataIndex];
-
-  console.log(verbData);
-
   const verb = verbData.definition;
   const example = verbData.example;
-  // console.log(example);
 
   return (
     <article className="mt-8">

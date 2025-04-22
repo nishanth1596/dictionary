@@ -44,7 +44,7 @@
   --color-Danger: #ff5252; /* Red */
 
   /* Font Families */
-  --font-Sans: "Inter", sans-serif;
+  --font-SansSerif: "Inter", sans-serif;
   --font-Serif: "Lora", serif;
   --font-Mono: "Inconsolata", monospace;
 }

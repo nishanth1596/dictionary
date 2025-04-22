@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import bookLogo from "../../assets/images/logo.svg";
 import moonIcon from "../../assets/images/icon-moon.svg";
 
 function Header() {
   const [isToggled, setIsToggled] = useState(false);
+  const [currentFont, setCurrentFont] = useState("font-SansSerif");
+  console.log(currentFont);
+
+  const previousFont = useRef("font-SansSerif");
+
+  useEffect(() => {
+    document.body.classList.remove(previousFont.current);
+    document.body.classList.add(currentFont);
+    previousFont.current = currentFont;
+  }, [currentFont]);
 
   return (
     <header className="m-6 flex justify-between">
@@ -13,10 +23,15 @@ function Header() {
         <label htmlFor="font" className="sr-only">
           Choose your preferred font theme
         </label>
-        <select name="font" id="font">
-          <option value="sansSerif">Sans Serif</option>
-          <option value="serif">Serif</option>
-          <option value="mono">Mono</option>
+        <select
+          name="font"
+          id="font"
+          value={currentFont}
+          onChange={(e) => setCurrentFont(e.target.value)}
+        >
+          <option value="font-SansSerif">Sans Serif</option>
+          <option value="font-Serif">Serif</option>
+          <option value="font-Mono">Mono</option>
         </select>
 
         <div className="border-Gray-100 flex items-center gap-3 border-l-[1px] pl-4">
