@@ -15,7 +15,7 @@ function Header() {
   }, [currentFont]);
 
   return (
-    <header className="m-6 flex justify-between">
+    <header className="m-6 mb-0 flex justify-between md:mx-10 md:mt-14">
       <img src={bookLogo} alt="Book Logo" />
 
       <div className="flex gap-4">

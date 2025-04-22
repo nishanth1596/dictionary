@@ -1,30 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  /* === Font Sizes with Line Heights === */
-
-  /* Desktop heading-h2 */
-  /* Heading - Large */
-  --heading-l-size: 64px;
-  --heading-l-line: 77px;
-
-  /* Heading - Medium */
-  --heading-m-size: 24px;
-  --heading-m-line: 29px;
-
-  /* Heading - Small */
-  --heading-s-size: 20px;
-  --heading-s-line: 24px;
-
-  /* Body - Medium */
-  --body-m-size: 18px;
-  --body-m-line: 24px;
-
-  /* Body - Small */
-  --body-s-size: 14px;
-  --body-s-line: 17px;
-}
-
 @theme {
   --color-Black-950: #050505;
   --color-Black-900: #1f1f1f;
@@ -59,11 +34,11 @@
   }
 
   h4 {
-    @apply text-lg leading-[1.38rem] font-bold italic;
+    @apply text-lg leading-[1.38rem] font-bold italic md:text-2xl md:leading-[1.58rem];
   }
 
   h5 {
-    @apply text-base leading-[1.19rem] font-normal tracking-normal;
+    @apply text-base leading-[1.19rem] font-normal tracking-normal md:text-xl;
   }
 
   p {

@@ -11,7 +11,7 @@ type DictionaryProp = {
 
 function Dictionary({ data }: DictionaryProp) {
   return (
-    <section className="mx-6">
+    <section className="mx-6 mt-6 md:mx-10 md:mt-[50px]">
       {!data ? (
         <LoadingSpinner />
       ) : (

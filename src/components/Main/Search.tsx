@@ -20,14 +20,14 @@ function Search({ onClick }: SearchProps) {
   }
 
   return (
-    <section className="relative mx-6 mt-6">
+    <section className="relative mx-6 mt-6 md:mx-10 md:mt-14">
       <form action="searchBar" onSubmit={handleOnSubmit}>
         <input
           type="text"
           id="searchBar"
           placeholder="Keyboard"
           onChange={handleChange}
-          className="bg-Gray-50 text-Black-800 placeholder:text-Black-800 w-full rounded-2xl px-6 py-3.5 leading-[19px] font-bold"
+          className="bg-Gray-50 text-Black-800 placeholder:text-Black-800 w-full rounded-2xl px-6 py-3.5 leading-[19px] font-bold md:py-[22px] md:text-xl md:leading-[21px]"
         />
         <img
           src={searchIcon}
