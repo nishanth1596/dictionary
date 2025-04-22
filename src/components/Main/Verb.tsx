@@ -10,12 +10,12 @@ function Verb({ data }: VerbProps) {
   );
 
   if (!verbDataSet) return null;
-  console.log(verbDataSet);
 
-  const verbDataIndex = verbDataSet.definitions.findIndex(
-    (item) => item.example,
-  );
-  const verbData = verbDataSet.definitions[verbDataIndex];
+  const definitions = verbDataSet.definitions;
+
+  const verbData = definitions.find((item) => item.example) ?? definitions[0];
+  if (!verbData) return null;
+
   const verb = verbData.definition;
   const example = verbData.example;
 
