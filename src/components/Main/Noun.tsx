@@ -1,4 +1,4 @@
-import { DictionaryEntry } from "./Dicitionary";
+import { DictionaryEntry } from "./Main";
 
 type NounProps = {
   data: DictionaryEntry;
@@ -6,9 +6,12 @@ type NounProps = {
 
 function Noun({ data }: NounProps) {
   const { meanings } = data;
+  const nounData = meanings.find((item) => item.partOfSpeech === "noun");
 
-  const definitions = meanings[0].definitions;
-  const synonyms = meanings[0].synonyms;
+  if (!nounData || !nounData.definitions) return null;
+
+  const definitions = nounData?.definitions;
+  const synonyms = nounData?.synonyms;
 
   return (
     <article className="mt-[2.63rem]">
@@ -30,9 +33,9 @@ function Noun({ data }: NounProps) {
         </li>
       </ul>
 
-      <h5 className="text-Gray-500 mt-6 flex gap-6">
-        Synonyms{" "}
-        <span className="text-Primary block font-bold">{synonyms}</span>
+      <h5 className="text-Gray-500 mt-6 flex flex-wrap gap-6">
+        <span>Synonyms</span>
+        <span className="text-Primary font-bold">{synonyms}</span>
       </h5>
     </article>
   );

@@ -1,12 +1,28 @@
-import { DictionaryEntry } from "./Dicitionary";
+import { DictionaryEntry } from "./Main";
 
 type VerbProps = {
   data: DictionaryEntry;
 };
 
 function Verb({ data }: VerbProps) {
-  const verb = data.meanings[1].definitions[0].definition;
-  const example = data.meanings[1].definitions[0].example;
+  const verbDataSet = data.meanings.find(
+    (item) => item.partOfSpeech === "verb",
+  );
+
+  if (!verbDataSet) return null;
+  console.log(verbDataSet);
+
+  const verbDataIndex = verbDataSet.definitions.findIndex(
+    (item) => item.example,
+  );
+
+  const verbData = verbDataSet.definitions[verbDataIndex];
+
+  console.log(verbData);
+
+  const verb = verbData.definition;
+  const example = verbData.example;
+  // console.log(example);
 
   return (
     <article className="mt-8">
@@ -18,9 +34,12 @@ function Verb({ data }: VerbProps) {
       <h5 className="text-Gray-500 mt-8">Meaning</h5>
       <ul className="custom-bullets border-Gray-100 mx-4 mt-4 list-disc border-b-[1px] pb-8 text-[0.94rem] leading-6 font-normal">
         <li className="text-Black-800 pl-2">{verb}</li>
-        <li className="text-Gray-500 mt-3.5 -mr-2 list-none pl-2">
-          "{example}"
-        </li>
+
+        {example && (
+          <li className="text-Gray-500 mt-3.5 -mr-2 list-none pl-2">
+            "{example}"
+          </li>
+        )}
       </ul>
     </article>
   );
