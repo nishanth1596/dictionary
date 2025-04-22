@@ -10,6 +10,7 @@ function Verb({ data }: VerbProps) {
   );
 
   if (!verbDataSet) return null;
+  console.log(verbDataSet);
 
   const verbDataIndex = verbDataSet.definitions.findIndex(
     (item) => item.example,

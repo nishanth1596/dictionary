@@ -20,7 +20,7 @@ function Search({ onClick }: SearchProps) {
   }
 
   return (
-    <section className="relative mx-6 mt-6 md:mx-10 md:mt-14">
+    <section className="relative mx-6 mt-6 md:mx-10 md:mt-14 lg:mx-auto lg:max-w-[46.06rem]">
       <form action="searchBar" onSubmit={handleOnSubmit}>
         <input
           type="text"
