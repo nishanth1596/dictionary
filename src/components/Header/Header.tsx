@@ -5,7 +5,6 @@ import moonIcon from "../../assets/images/icon-moon.svg";
 function Header() {
   const [isToggled, setIsToggled] = useState(false);
   const [currentFont, setCurrentFont] = useState("font-SansSerif");
-  console.log(currentFont);
 
   const previousFont = useRef("font-SansSerif");
 
