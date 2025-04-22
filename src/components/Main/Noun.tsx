@@ -22,15 +22,14 @@ function Noun({ data }: NounProps) {
 
       <h5 className="text-Gray-500 mt-8 md:mt-11">Meaning</h5>
       <ul className="custom-bullets mt-4 ml-4 list-disc space-y-3.5 *:pl-2 md:ml-12">
-        <li className="text-Black-800 text-[0.94rem] leading-6 font-normal md:pr-5 md:text-lg">
-          {definitions[0].definition}
-        </li>
-        <li className="text-Black-800 text-[0.94rem] leading-6 font-normal md:pr-5 md:text-lg">
-          {definitions[1].definition}
-        </li>
-        <li className="text-Black-800 text-[0.94rem] leading-6 font-normal md:pr-5 md:text-lg">
-          {definitions[2].definition}
-        </li>
+        {definitions.slice(0, 3).map((def, index) => (
+          <li
+            key={index}
+            className="text-Black-800 text-[0.94rem] leading-6 font-normal md:pr-5 md:text-lg"
+          >
+            {def.definition}
+          </li>
+        ))}
       </ul>
 
       <h5 className="text-Gray-500 mt-6 flex flex-wrap gap-6 md:mt-10">

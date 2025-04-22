@@ -41,14 +41,18 @@ export type DictionaryEntry = {
 function Main() {
   const [data, setData] = useState<DictionaryEntry[]>();
   const [searchInput, setSearchInput] = useState("keyboard");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     const getData = async () => {
       try {
         const newData = await fetchData(searchInput);
         setData(newData);
       } catch (error) {
         console.error("Error fetching dictionary data: ", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -60,9 +64,9 @@ function Main() {
   }
 
   return (
-    <main className="">
+    <main>
       <Search onClick={handleSearch} />
-      <Dictionary data={data} />
+      <Dictionary data={data} isLoading={isLoading} />
     </main>
   );
 }

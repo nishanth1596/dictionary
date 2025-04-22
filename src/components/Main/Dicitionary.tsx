@@ -7,12 +7,13 @@ import { DictionaryEntry } from "./Main";
 
 type DictionaryProp = {
   data: DictionaryEntry[] | undefined;
+  isLoading: boolean;
 };
 
-function Dictionary({ data }: DictionaryProp) {
+function Dictionary({ data, isLoading }: DictionaryProp) {
   return (
     <section className="relative mx-6 mt-6 md:mx-10 md:mt-[50px] lg:mx-auto lg:max-w-[46.06rem]">
-      {!data ? (
+      {!data || isLoading ? (
         <LoadingSpinner />
       ) : (
         <>
