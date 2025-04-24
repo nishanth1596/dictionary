@@ -15,7 +15,7 @@ function Source({ data }: SourceProps) {
         href={sourceUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-Black-800 mt-2 mb-[85px] flex items-center gap-2.5 text-sm leading-[1.06rem] font-normal md:mt-0 md:mb-[118px]"
+        className="text-Black-800 dark:text-White mt-2 mb-[85px] flex items-center gap-2.5 text-sm leading-[1.06rem] font-normal md:mt-0 md:mb-[118px]"
       >
         {sourceUrl} <img src={newWindowIcon} alt="" aria-hidden="true" />
       </a>

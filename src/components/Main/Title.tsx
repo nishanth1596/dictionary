@@ -11,7 +11,7 @@ function Title({ data }: TitleProps) {
   return (
     <div className="flex items-center justify-between">
       <div>
-        <h2>{word}</h2>
+        <h2 className="dark:text-White">{word}</h2>
         <h3 className="text-Primary font-SansSerif mt-2 md:mt-3">{phonetic}</h3>
       </div>
 

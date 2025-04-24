@@ -27,7 +27,7 @@ function Search({ onClick }: SearchProps) {
           id="searchBar"
           placeholder="Keyboard"
           onChange={handleChange}
-          className="bg-Gray-50 text-Black-800 placeholder:text-Black-800 w-full rounded-2xl px-6 py-3.5 leading-[19px] font-bold md:py-[22px] md:text-xl md:leading-[21px]"
+          className="bg-Gray-50 dark:text-White dark:bg-Black-900 text-Black-800 placeholder:text-Black-800 dark:placeholder:text-White w-full rounded-2xl px-6 py-3.5 leading-[19px] font-bold md:py-[22px] md:text-xl md:leading-[21px]"
         />
         <img
           src={searchIcon}

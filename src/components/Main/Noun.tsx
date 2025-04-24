@@ -15,9 +15,9 @@ function Noun({ data }: NounProps) {
 
   return (
     <article className="mt-[2.63rem]">
-      <h4 className="flex items-center gap-4">
+      <h4 className="dark:text-White flex items-center gap-4">
         noun
-        <span className="border-Gray-100 block w-full border-t-[1px] line-through"></span>
+        <span className="border-Gray-100 dark:border-Black-700 block w-full border-t-[1px] line-through"></span>
       </h4>
 
       <h5 className="text-Gray-500 mt-8 md:mt-11">Meaning</h5>
@@ -25,7 +25,7 @@ function Noun({ data }: NounProps) {
         {definitions.slice(0, 3).map((def, index) => (
           <li
             key={index}
-            className="text-Black-800 text-[0.94rem] leading-6 font-normal md:pr-5 md:text-lg"
+            className="text-Black-800 dark:text-White text-[0.94rem] leading-6 font-normal md:pr-5 md:text-lg"
           >
             {def.definition}
           </li>
