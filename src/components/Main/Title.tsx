@@ -6,7 +6,15 @@ type TitleProps = {
 };
 
 function Title({ data }: TitleProps) {
-  const { word, phonetic } = data;
+  const { word, phonetic, phonetics } = data;
+
+  const audioURl = phonetics.find((item) => item.audio !== "")?.audio;
+
+  function handlePlay() {
+    if (!audioURl) return;
+    const audio = new Audio(audioURl);
+    audio.play();
+  }
 
   return (
     <div className="flex items-center justify-between">
@@ -15,7 +23,11 @@ function Title({ data }: TitleProps) {
         <h3 className="text-Primary font-SansSerif mt-2 md:mt-3">{phonetic}</h3>
       </div>
 
-      <button aria-label={`Play pronunciation of ${word}`}>
+      <button
+        aria-label={`Play pronunciation of ${word}`}
+        onClick={handlePlay}
+        className="cursor-pointer"
+      >
         <img
           src={playIcon}
           alt=""
