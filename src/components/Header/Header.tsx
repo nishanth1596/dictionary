@@ -44,7 +44,7 @@ function Header() {
           id="font"
           value={currentFont}
           onChange={(e) => setCurrentFont(e.target.value)}
-          className="dark:text-White cursor-pointer"
+          className="dark:text-White dark:bg-Black-900 cursor-pointer"
         >
           <option value="font-SansSerif">Sans Serif</option>
           <option value="font-Serif">Serif</option>
