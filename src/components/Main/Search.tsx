@@ -29,14 +29,13 @@ function Search({ onClick }: SearchProps) {
           onChange={handleChange}
           className="bg-Gray-50 dark:text-White dark:bg-Black-900 text-Black-800 placeholder:text-Black-800 dark:placeholder:text-White w-full rounded-2xl px-6 py-3.5 leading-[19px] font-bold md:py-[22px] md:text-xl md:leading-[21px]"
         />
-        <img
-          src={searchIcon}
-          alt="Search Icon"
-          className="absolute top-1/2 right-4 -translate-y-1/2"
-        />
 
-        <button type="submit" aria-label="Submit Search" className="hidden">
-          search
+        <button type="submit" aria-label="Submit Search">
+          <img
+            src={searchIcon}
+            alt="Search Icon"
+            className="absolute top-1/2 right-4 -translate-y-1/2"
+          />
         </button>
       </form>
     </section>
